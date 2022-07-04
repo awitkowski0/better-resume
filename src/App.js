@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import { useQuill } from 'react-quilljs';
@@ -10,7 +9,7 @@ function App() {
 
   React.useEffect(() => {
     if (quill) {
-      quill.clipboard.dangerouslyPasteHTML('<h1>React Hook for Quill!</h1>');
+      quill.clipboard.dangerouslyPasteHTML('<h1>RESUME!!!!</h1>');
     }
   }, [quill]);
 
