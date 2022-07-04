@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Better Resume",
+  "name": "A better resume.",
   "icons": [
     {
       "src": "favicon.ico",
