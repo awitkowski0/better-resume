@@ -1,23 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { useQuill } from 'react-quilljs';
+// snow theme?
+import "quill/dist/quill.snow.css";
 
 function App() {
+  const { quill, quillRef } = useQuill();
+
+  React.useEffect(() => {
+    if (quill) {
+      quill.clipboard.dangerouslyPasteHTML('<h1>React Hook for Quill!</h1>');
+    }
+  }, [quill]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ width: 1000, height: 1000 }}>
+      <div ref={quillRef}/>
     </div>
   );
 }
